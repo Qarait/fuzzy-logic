@@ -9,6 +9,7 @@ src/
 
 # Detailed documentation (not ready for public)
 docs/
+!docs/architecture_philosophy.md
 
 # Python
 __pycache__/

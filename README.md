@@ -1,24 +1,47 @@
 # Fuzzy Logic for Safety-Critical AI
 
-A hybrid architecture for explainable decision-making in regulated systems.
+A hybrid architecture combining deep learning perception with auditable fuzzy reasoning for regulated systems.
 
 ## The Problem
 
-Modern AI systems often operate as black boxes where deep learning models make decisions that are difficult to explain, audit, or surgically correct. While acceptable for non-critical applications, this opacity presents a significant barrier in sectors like medical devices, defense, and industrial safety control. Regulators and stakeholders now require answers to fundamental questions regarding decision rationale, edge-case verification, and the ability to remediate incorrect behavior without the systemic risk of total model retraining.
+Deep learning excels at pattern recognition but fails at explainability. When a neural network recommends a medical intervention, denies a security clearance, or triggers an industrial shutdown, it cannot tell you why. The decision is encoded in millions of weights that no human can inspect, edit, or audit.
+
+This is unacceptable in regulated industries. The FDA wants to know why your algorithm flagged a tumor. The DoD wants to know why your system classified a target. The plant manager wants to know why your controller shut down the line.
+
+"The model decided" is not an answer.
 
 ## The Approach
 
-This project implements a hybrid architecture that establishes an explicit boundary between learned perception and designed reasoning. By utilizing deep learning for pattern recognition—its primary strength—while delegating decision logic to an auditable reasoning layer, the system achieves a level of transparency required for safety-critical deployment. 
+This architecture draws a hard boundary between perception and reasoning:
 
-The architecture is built upon the **Gate0** policy engine, utilizing its deterministic enforcement capabilities to ensure that every fuzzy recommendation remains within strictly defined safety envelopes. This integration combines the nuanced reasoning of fuzzy logic with the uncompromising defensibility of a micro-policy foundation.
+- **Perception** (deep learning): Pattern recognition, feature extraction, anomaly detection. This layer can be opaque because it answers "what is this?"
+- **Reasoning** (fuzzy logic): Decision-making based on explicit, human-authored rules. This layer must be transparent because it answers "what should we do about it?"
+
+The key insight is that you can audit the reasoning layer without understanding the perception layer. When something goes wrong, you trace which rules fired, not which neurons activated.
+
+The reasoning layer integrates with [Gate0](https://github.com/Qarait/gate0), a deterministic micro-policy engine. Fuzzy logic proposes actions with degrees of confidence; Gate0 enforces hard constraints. Together, they produce decisions that are both nuanced and bounded.
+
+## Why This Works in Regulated Environments
+
+| Concern | Neural Networks | This Architecture |
+|---------|-----------------|-------------------|
+| "Why did it decide that?" | Unknown | Trace rule activations |
+| "How do I fix a wrong decision?" | Retrain the model | Edit one rule |
+| "Can I prove it won't do X?" | Difficult | Policy constraints via Gate0 |
+| "Can domain experts review it?" | No (weights are unreadable) | Yes (rules are readable) |
 
 ## Target Domains
 
-The primary focus is on high-stakes environments including medical devices and clinical decision support systems subject to FDA SaMD and IEC 62304 standards. Secondary applications include defense, autonomous systems, and industrial safety control.
+**Primary:** Medical devices, clinical decision support (FDA SaMD, IEC 62304, ISO 13485)
 
-## Status
+**Secondary:** Defense systems, autonomous vehicles, industrial safety control
 
-Research and architecture validation are currently in progress.
+## Project Structure
+
+```
+docs/           Architecture philosophy and design rationale
+src/            Implementation (not yet public)
+```
 
 ## License
 
