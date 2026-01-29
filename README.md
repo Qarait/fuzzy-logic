@@ -27,10 +27,23 @@ Our architecture is benchmarked against the most demanding regulatory environmen
 - **Autonomous Defense:** Rules of Engagement (ROE) and mission-critical logic.
 - **Cybersecurity:** Identity-centric Risk-Adaptive Access Control.
 
+## Empirical Validation
+
+This architecture is validated using a "Hardware-Style" approach. We publish the observable behavior of the system, not the implementation.
+
+| Invariant | Verification |
+|-----------|--------------|
+| **Stability** | Output variance bounded under perception noise [(report)](validation/stability_test_report.md) |
+| **Integrity** | Policy violations never propagated downstream [(report)](validation/boundary_enforcement_report.md) |
+| **Traceability** | Every decision reconstructible from audit logs [(comparison)](validation/auditability_comparison.md) |
+
+See the [validation/](validation/) directory for full test results and methodology.
+
 ## Project Structure
 
 ```
 docs/           Architecture philosophy and design rationale (RA-ACS)
+validation/     Empirical test results and audit traces (public)
 src/            High-assurance implementation (not yet public)
 ```
 

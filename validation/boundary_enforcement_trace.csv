@@ -1,0 +1,51 @@
+timestep,input_severity,fuzzy_recommendation,policy_action,final_output,reason
+0,0.0,10.56,ALLOW,10.56,Within policy bounds
+1,2.04,10.56,ALLOW,10.56,Within policy bounds
+2,4.08,10.56,ALLOW,10.56,Within policy bounds
+3,6.12,10.79,ALLOW,10.79,Within policy bounds
+4,8.16,11.26,ALLOW,11.26,Within policy bounds
+5,10.2,13.13,ALLOW,13.13,Within policy bounds
+6,12.24,24.61,ALLOW,24.61,Within policy bounds
+7,14.29,32.94,ALLOW,32.94,Within policy bounds
+8,16.33,39.67,ALLOW,39.67,Within policy bounds
+9,18.37,45.73,ALLOW,45.73,Within policy bounds
+10,20.41,50.0,ALLOW,50.0,Within policy bounds
+11,22.45,50.0,ALLOW,50.0,Within policy bounds
+12,24.49,50.0,ALLOW,50.0,Within policy bounds
+13,26.53,50.0,ALLOW,50.0,Within policy bounds
+14,28.57,50.0,ALLOW,50.0,Within policy bounds
+15,30.61,50.0,ALLOW,50.0,Within policy bounds
+16,32.65,50.0,ALLOW,50.0,Within policy bounds
+17,34.69,50.0,ALLOW,50.0,Within policy bounds
+18,36.73,50.0,ALLOW,50.0,Within policy bounds
+19,38.78,50.0,ALLOW,50.0,Within policy bounds
+20,40.82,50.0,ALLOW,50.0,Within policy bounds
+21,42.86,50.0,ALLOW,50.0,Within policy bounds
+22,44.9,50.0,ALLOW,50.0,Within policy bounds
+23,46.94,50.0,ALLOW,50.0,Within policy bounds
+24,48.98,50.0,ALLOW,50.0,Within policy bounds
+25,51.02,50.0,ALLOW,50.0,Within policy bounds
+26,53.06,50.0,ALLOW,50.0,Within policy bounds
+27,55.1,50.0,ALLOW,50.0,Within policy bounds
+28,57.14,50.0,ALLOW,50.0,Within policy bounds
+29,59.18,50.0,ALLOW,50.0,Within policy bounds
+30,61.22,52.29,ALLOW,52.29,Within policy bounds
+31,63.27,56.82,ALLOW,56.82,Within policy bounds
+32,65.31,62.56,ALLOW,62.56,Within policy bounds
+33,67.35,70.33,ALLOW,70.33,Within policy bounds
+34,69.39,82.47,ALLOW,82.47,Within policy bounds
+35,71.43,87.89,ALLOW,87.89,Within policy bounds
+36,73.47,88.3,ALLOW,88.3,Within policy bounds
+37,75.51,88.69,ALLOW,88.69,Within policy bounds
+38,77.55,89.05,ALLOW,89.05,Within policy bounds
+39,79.59,89.38,ALLOW,89.38,Within policy bounds
+40,81.63,89.44,DENY,100.0,Severity exceeds critical threshold (80). Action escalated to maximum.
+41,83.67,89.44,DENY,100.0,Severity exceeds critical threshold (80). Action escalated to maximum.
+42,85.71,89.44,DENY,100.0,Severity exceeds critical threshold (80). Action escalated to maximum.
+43,87.76,89.44,DENY,100.0,Severity exceeds critical threshold (80). Action escalated to maximum.
+44,89.8,89.44,DENY,100.0,Severity exceeds critical threshold (80). Action escalated to maximum.
+45,91.84,89.44,DENY,100.0,Severity exceeds critical threshold (80). Action escalated to maximum.
+46,93.88,89.44,DENY,100.0,Severity exceeds critical threshold (80). Action escalated to maximum.
+47,95.92,89.44,DENY,100.0,Severity exceeds critical threshold (80). Action escalated to maximum.
+48,97.96,89.44,DENY,100.0,Severity exceeds critical threshold (80). Action escalated to maximum.
+49,100.0,89.44,DENY,100.0,Severity exceeds critical threshold (80). Action escalated to maximum.
