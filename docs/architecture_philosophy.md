@@ -39,19 +39,10 @@ This architecture separates **what is learned** from **what is designed**:
 
 ## Why This Matters
 
-### The Neural Network Problem
+### Example: The High-Assurance Benchmark (Clinical)
 
 ```
-Input: blood_pressure=142, heart_rate=98
-Output: alert_level=0.87
-
-Why? Unknown. It's encoded in millions of weights.
-```
-
-### Our Solution
-
-```
-Input: blood_pressure=142, heart_rate=98
+Input: vitals_percept={bp: 142, hr: 98}
 
 Perception Layer (learned):
 ├── blood_pressure membership: HIGH(0.7), NORMAL(0.3)
@@ -71,7 +62,7 @@ Output: alert_level = 0.87
 Why: Rule 7 dominant (bp IS HIGH). Rule 12 contributed.
 ```
 
-**That audit trail is the fundamental difference.**
+**This degree of auditability is why we benchmark against medical standards. The same rigor applies to any critical infrastructure, from autonomous drones to power grid management.**
 
 ---
 
