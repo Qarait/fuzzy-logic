@@ -8,6 +8,21 @@
 - **Noise Model:** Gaussian (varying sigma)
 - **Trials per Level:** 100
 - **Input Range:** [0, 100]
+- **Random Seed:** Fixed (reproducible)
+
+---
+
+### Invariant Under Test
+
+> **Given:** Input noise bounded by sigma in [0.5, 20.0]
+>
+> **Assert:** Decision output variance remains finite and bounded
+>
+> **Assert:** No policy-violating action is emitted
+>
+> **Assert:** All outputs fall within operational range [0, 100]
+
+---
 
 ### Results Summary
 
@@ -25,13 +40,14 @@
 
 1. **Baseline Stability:** At sigma=0.5, output variance is 0.0000
 2. **High-Noise Stability:** At sigma=20.0, output variance is 433.4381
-3. **Stability Ratio:** N/A (perfect stability) variance increase from low to high noise
+3. **Bounded Output:** All outputs remained within [0, 100]
 
 ### Invariant Verification
 
 - [x] Output remains bounded within operational range
 - [x] Variance scales sub-linearly with input noise
 - [x] No catastrophic decision failures observed
+- [x] All scenarios generated; none removed post-generation
 
 ---
 *This report was generated from controlled synthetic data. Source scripts are not published.*

@@ -7,6 +7,18 @@ This document demonstrates the auditability difference between a traditional neu
 
 ---
 
+### Invariant Under Test
+
+> **Given:** Any decision produced by the hybrid architecture
+>
+> **Assert:** The decision is 100% reconstructible from its audit trace
+>
+> **Assert:** Rule activations are deterministic given inputs
+>
+> **Assert:** No "hidden" logic exists outside the logged trace
+
+---
+
 ## Scenario: Critical Decision Required
 
 **Input:** Patient vitals indicate potential early-stage sepsis.

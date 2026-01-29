@@ -37,4 +37,31 @@ All tests use synthetic data with explicitly defined input specifications:
 
 ---
 
+## Data Integrity Statement
+
+> All scenarios are generated using fixed seeds and predefined bounds.
+> No scenarios were removed post-generation.
+> Failure cases, if any, are included in the results.
+
+This validation suite is designed for reproducibility. Given the same input specifications, the same outputs will be produced.
+
+---
+
+## Scope and Limitations
+
+These tests demonstrate **bounded behavior**, not optimality or correctness.
+
+**This validation does NOT prove:**
+- Optimality of the fuzzy rule design
+- Correctness of domain-specific rules (which require domain experts)
+- That deep learning retraining is unnecessary
+- That the system meets any specific regulatory certification
+
+**This validation DOES prove:**
+- The system exhibits predictable, bounded behavior under defined conditions
+- Policy enforcement is deterministic and auditable
+- Decisions are fully traceable and reproducible
+
+---
+
 *Last updated: 2026-01-28*

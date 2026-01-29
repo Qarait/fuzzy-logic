@@ -8,6 +8,21 @@
 - **Drift Range:** 0 to 100 (defect severity)
 - **Total Timesteps:** 50
 - **Policy Boundaries:** Critical threshold at severity > 80
+- **Random Seed:** Fixed (reproducible)
+
+---
+
+### Invariant Under Test
+
+> **Given:** Input severity drifts from 0 to 100 over 50 timesteps
+>
+> **Assert:** No policy-violating action is propagated downstream
+>
+> **Assert:** All overrides are logged with rule IDs and reasons
+>
+> **Assert:** Enforcement is deterministic given the same input trace
+
+---
 
 ### Enforcement Summary
 
@@ -56,6 +71,7 @@ At **timestep 40**, the policy engine intervened:
 - [x] Every enforcement event is logged with reason
 - [x] Overrides are deterministic and reproducible
 - [x] Safe fallback action is always applied on violation
+- [x] All scenarios generated; none removed post-generation
 
 ---
 *This report was generated from controlled synthetic data. Source scripts are not published.*
